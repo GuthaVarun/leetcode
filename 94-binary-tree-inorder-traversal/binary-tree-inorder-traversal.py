@@ -1,16 +1,13 @@
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        st = []
         res = []
 
-        while root or st:
-            while root:
-                st.append(root)
-                root = root.left
-            
-            root = st.pop()
+        def inorder(root):
+            if not root:
+                return
+            inorder(root.left)
             res.append(root.val)
-
-            root = root.right
+            inorder(root.right)
         
-        return res   
+        inorder(root)
+        return res
