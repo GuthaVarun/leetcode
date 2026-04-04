@@ -14,4 +14,4 @@ class Solution:
             if n1.val!=n2.val:
                 return False
             return mirror(n1.left,n2.right) and mirror(n1.right,n2.left)
-        return mirror(root,root)
+        return mirror(root.left,root.right)
