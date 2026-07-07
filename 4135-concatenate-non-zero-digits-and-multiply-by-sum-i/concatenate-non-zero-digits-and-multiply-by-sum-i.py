@@ -11,5 +11,3 @@ class Solution:
         for i in n1:
             s+=int(i)
         return int(n1)*s
-            
-            
